@@ -1,0 +1,41 @@
+name: home_webcenter
+
+services:
+  docker-backend:
+    container_name: docker-backend
+    build:
+      context: ../docker-backend
+      dockerfile: ../docker/docker-backend/Dockerfile
+    ports:
+      - "3004:3004"
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  filebrowser:
+    container_name: FileBrowser
+    image: filebrowser/filebrowser:v2.30.0
+    ports:
+      - "3003:80"
+    restart: always
+    volumes:
+      - /usr/home-webcenter/filebrowser/files:/srv
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ../
+      dockerfile: docker/webcenter-frontend/Dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
+
+  pgAdmin:
+    container_name: pgAdmin
+    image: dpage/pgadmin4:8.9
+    ports:
+      - "3001:80"
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@pgadmin.org
+      PGADMIN_DEFAULT_PASSWORD: admin
