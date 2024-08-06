@@ -1,13 +1,68 @@
-body {
+body
+{
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+code
+{
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+:root
+{
+  --author-text-color: black;
+
+  --docker-container-status-running-color: green;
+  --docker-container-status-stopped-color: red;
+  --docker-container-status-other-color: gray;
+
+  --footer-background: #cccccc;
+  --footer-border-color: #bfbfbf;
+  --footer-text-hover-color: #aaaaaa;
+
+  --header-background: #f8f9fa;
+  --header-border-color: #dee2e6;
+  --header-height: 48px;
+  --header-text-hover-color: #aaaaaa;
+
+  --home-content-background-color: yellow;
+  --home-content-item-background-color: blueviolet;
+  --home-content-item-text-color: black;
+  --home-content-navigation-border-color: black;
+
+  --darkmode-toggle-label-color: #212529;
+  --darkmode-toggle-background-color: #e9ecef;
+  --darkmode-toggle-handle-color: #007bff;
+}
+
+[data-theme="dark"]
+{
+  --author-text-color: white;
+
+  --docker-container-status-running-color: green;
+  --docker-container-status-stopped-color: red;
+  --docker-container-status-other-color: gray;
+
+  --footer-background: #80f0f0;
+  --footer-border-color: #000000;
+  --footer-text-hover-color: #000000;
+
+  --header-background: #80f0f0;
+  --header-border-color: #000000;
+  --header-text-hover-color: #ffffff;
+
+  --home-content-background-color: green;
+  --home-content-item-background-color: darkgray;
+  --home-content-item-text-color: white;
+  --home-content-navigation-border-color: white;
+
+  --darkmode-toggle-label-color: white;
+  --darkmode-toggle-background-color: #464f56;
+  --darkmode-toggle-handle-color: #007bff;
 }

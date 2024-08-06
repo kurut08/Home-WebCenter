@@ -1,0 +1,60 @@
+#dark-mode-toggle-container
+{
+    height: var(--header-height);
+    width: 100%;
+}
+
+#dark-mode-toggle-container input
+{
+    display: block;
+    margin: 0 auto;
+}
+
+#dark_mode_toggle
+{
+    visibility: hidden;
+}
+
+#dark_mode_toggle_label
+{
+    display: block;
+    height: 20px;
+    margin: 0 28px 0 28px;
+    position: relative;
+    width: 40px;
+}
+
+#dark_mode_toggle + #dark_mode_toggle_label
+{
+    align-items: center;
+    display: flex;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--darkmode-toggle-label-color)
+}
+
+#dark_mode_toggle + #dark_mode_toggle_label::before
+{
+    background-color: var(--darkmode-toggle-background-color);
+    border-radius: 2em;
+    content: "";
+    height: 1em;
+    transition: background-color 250ms ease-in-out;
+    width: 4em;
+}
+
+#dark_mode_toggle + #dark_mode_toggle_label::after
+{
+    background-color: var(--darkmode-toggle-handle-color);
+    border-radius: 1em;
+    content: "";
+    height: 0.8em;
+    position: absolute;
+    transition: background-color 250ms ease-in-out, transform 250ms ease-in-out, color 250ms ease-in-out;
+    width: 0.8em;
+}
+
+#dark_mode_toggle:checked + #dark_mode_toggle_label::after
+{
+    transform: translateX(100%);
+}

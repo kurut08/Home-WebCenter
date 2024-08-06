@@ -1,0 +1,41 @@
+#header
+{
+    background-color: var(--header-background);
+    border-bottom: 2px solid var(--header-border-color);
+    display: flex;
+    height: var(--header-height);
+    position: fixed;
+    width: 100%;
+}
+
+#home-container
+{
+    text-align: center;
+    width: 10%;
+}
+
+#home-container h4
+{
+    margin: 15px 0;
+}
+
+#home-container a:hover
+{
+    color: var(--header-text-hover-color)
+}
+
+#filler
+{
+    width: 75%;
+}
+
+#toggle-container
+{
+    width: 5%;
+}
+
+#lang-container
+{
+    text-align: center;
+    width: 10%;
+}
