@@ -21,6 +21,7 @@ code
   --docker-container-status-running-color: green;
   --docker-container-status-stopped-color: red;
   --docker-container-status-other-color: gray;
+  --docker-containers-border-color: black;
 
   --footer-background: #cccccc;
   --footer-border-color: #bfbfbf;
@@ -30,6 +31,7 @@ code
   --header-background: #f8f9fa;
   --header-border-color: #dee2e6;
   --header-height: 48px;
+  --header-height-border: 50px;
   --header-text-hover-color: #aaaaaa;
 
   --home-content-background-color: yellow;
@@ -49,6 +51,7 @@ code
   --docker-container-status-running-color: green;
   --docker-container-status-stopped-color: red;
   --docker-container-status-other-color: gray;
+  --docker-containers-border-color: black;
 
   --footer-background: #80f0f0;
   --footer-border-color: #000000;

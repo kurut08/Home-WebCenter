@@ -1,0 +1,64 @@
+#docker-container
+{
+    height: 15vh;
+    width: 100%;
+}
+
+#docker-label
+{
+    border-bottom: 2px solid var(--docker-containers-border-color);
+    height: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+#docker-label-text
+{
+    margin: 3px 0;
+}
+
+#docker-containers-content
+{
+    align-content: center;
+    display: flex;
+    height: calc(100% - 26px);
+    width: 100%;
+}
+
+.docker-container-item
+{
+    align-content: center;
+    background-color: var(--home-content-item-background-color);
+    border: 2px solid var(--home-content-navigation-border-color);
+    border-radius: 2em;
+    color: var(--home-content-item-text-color);
+    margin: auto;
+    height: 90%;
+    text-align: center;
+    width: 10%;
+}
+
+.docker-container-item p
+{
+    margin: 0;
+}
+
+.docker-container-status
+{
+    font-weight: bold;
+}
+
+.docker-container-status-running
+{
+    color: var(--docker-container-status-running-color);
+}
+
+.docker-container-status-stopped
+{
+    color: var(--docker-container-status-stopped-color)
+}
+
+.docker-container-status-other
+{
+    color: var(--docker-container-status-other-color)
+}

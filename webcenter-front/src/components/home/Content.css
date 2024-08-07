@@ -1,0 +1,6 @@
+#homepage_content
+{
+    background-color: var(--home-content-background-color);
+    padding-top: var(--header-height-border);
+    width: 100%;
+}
