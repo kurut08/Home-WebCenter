@@ -22,7 +22,7 @@ services:
       - /usr/home-webcenter/filebrowser/files:/srv
 
   frontend:
-    container_name: frontend
+    container_name: webcenter-frontend
     build:
       context: ../
       dockerfile: docker/webcenter-frontend/Dockerfile
