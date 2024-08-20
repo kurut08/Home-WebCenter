@@ -21,14 +21,14 @@ services:
     volumes:
       - /usr/home-webcenter/filebrowser/files:/srv
 
-  frontend:
-    container_name: webcenter-frontend
+  os-status:
+    container_name: os-status
     build:
-      context: ../
-      dockerfile: docker/webcenter-frontend/Dockerfile
-    restart: always
+      context: ../os-status
+      dockerfile: ../docker/os-status/Dockerfile
     ports:
-      - "3000:3000"
+      - "3005:3005"
+    restart: always
 
   pgAdmin:
     container_name: pgAdmin
@@ -39,3 +39,12 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@pgadmin.org
       PGADMIN_DEFAULT_PASSWORD: admin
+
+  webcenter-frontend:
+    container_name: webcenter-frontend
+    build:
+      context: ../
+      dockerfile: docker/webcenter-frontend/Dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
