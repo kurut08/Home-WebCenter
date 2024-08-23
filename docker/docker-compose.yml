@@ -29,7 +29,7 @@ services:
       - "3007:6611"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./onedev:/opt/onedev
+      - /usr/home-webcenter/onedev:/opt/onedev
     tty: true
     stdin_open: true
     restart: always
