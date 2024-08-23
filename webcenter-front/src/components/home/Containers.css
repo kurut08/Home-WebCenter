@@ -43,6 +43,12 @@
     margin: 0;
 }
 
+.docker-container-item-hover-redirect:hover
+{
+    height: 95%;
+    width: 15%;
+}
+
 .docker-container-status
 {
     font-weight: bold;
