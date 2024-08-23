@@ -2,6 +2,7 @@
 git pull
 sudo docker stop docker-backend
 sudo docker stop FileBrowser
+sudo docker stop onedev
 sudo docker stop os-status
 sudo docker stop pgAdmin
 sudo docker stop webcenter-frontend
@@ -9,6 +10,7 @@ sudo docker stop webcenter-frontend
 sudo docker container rm docker-backend
 sudo docker container rm FileBrowser
 sudo docker container rm os-status
+sudo docker container rm onedev
 sudo docker container rm --volumes pgAdmin
 sudo docker container rm webcenter-frontend
 
