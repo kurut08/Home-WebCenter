@@ -27,7 +27,7 @@ echo ------------------------------------------------------------------------
 
 echo -e "\n\n\n"
 
-echo ------------Removing images of local available containers------------
+echo ------------Removing images of locally available containers------------
 sudo docker image rm home_webcenter-docker-backend:latest
 sudo docker image rm home_webcenter-os-status:latest
 sudo docker image rm home_webcenter-webcenter-frontend:latest
