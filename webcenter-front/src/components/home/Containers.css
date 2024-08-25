@@ -1,5 +1,6 @@
 #docker-container
 {
+    border-bottom: 2px solid var(--docker-containers-border-color);
     height: 15vh;
     width: 100%;
 }

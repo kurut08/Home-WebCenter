@@ -32,12 +32,12 @@ export const Containers = () => {
         }, 10000);
     }, []);
 
-    const getContainerStatus = (name) => {
+    const GetContainerStatus = (name) => {
         const container = containers.find(container => container.Names.some(n => n.includes(name)));
         return container ? container.Status : 'Not running';
     };
 
-    const getContainerStatusClass = (status) => {
+    const GetContainerStatusClass = (status) => {
         const lowerCaseStatus = status.toLowerCase();
         if(lowerCaseStatus === 'running' || lowerCaseStatus.includes('up'))
         {
@@ -53,19 +53,19 @@ export const Containers = () => {
         }
     }
 
-    const redirectToPgAdmin = () => {
+    const RedirectToPgAdmin = () => {
         window.location.href = `${window.location.protocol}//${window.location.hostname}:3001`;
     };
 
-    const redirectToPortainer = () => {
+    const RedirectToPortainer = () => {
         window.location.href = `https://${window.location.hostname}:3002`;
     };
 
-    const redirectToFileBrowser = () => {
+    const RedirectToFileBrowser = () => {
         window.location.href = `${window.location.protocol}//${window.location.hostname}:3003`;
     };
 
-    const redirectToOnedev = () => {
+    const RedirectToOnedev = () => {
         window.location.href = `${window.location.protocol}//${window.location.hostname}:3006`;
     };
 
@@ -77,27 +77,27 @@ export const Containers = () => {
             <div id="docker-containers-content">
                 <div className="docker-container-item">
                     <p>docker-backend</p>
-                    <p className={`docker-container-status ${getContainerStatusClass(getContainerStatus('docker-backend'))}`}>{getContainerStatus('docker-backend')}</p>
+                    <p className={`docker-container-status ${GetContainerStatusClass(GetContainerStatus('docker-backend'))}`}>{GetContainerStatus('docker-backend')}</p>
                 </div>
-                <div className="docker-container-item docker-container-item-hover-redirect" onClick={redirectToFileBrowser}>
+                <div className="docker-container-item docker-container-item-hover-redirect" onClick={RedirectToFileBrowser}>
                     <p><b>FileBrowser</b></p>
-                    <p className={`docker-container-status ${getContainerStatusClass(getContainerStatus('FileBrowser'))}`}>{getContainerStatus('FileBrowser')}</p>
+                    <p className={`docker-container-status ${GetContainerStatusClass(GetContainerStatus('FileBrowser'))}`}>{GetContainerStatus('FileBrowser')}</p>
                 </div>
                 <div className="docker-container-item">
                     <p>os-status</p>
-                    <p className={`docker-container-status ${getContainerStatusClass(getContainerStatus('os-status'))}`}>{getContainerStatus('os-status')}</p>
+                    <p className={`docker-container-status ${GetContainerStatusClass(GetContainerStatus('os-status'))}`}>{GetContainerStatus('os-status')}</p>
                 </div>
-                <div className="docker-container-item docker-container-item-hover-redirect" onClick={redirectToOnedev}>
+                <div className="docker-container-item docker-container-item-hover-redirect" onClick={RedirectToOnedev}>
                     <p><b>OneDev</b></p>
-                    <p className={`docker-container-status ${getContainerStatusClass(getContainerStatus('onedev'))}`}>{getContainerStatus('onedev')}</p>
+                    <p className={`docker-container-status ${GetContainerStatusClass(GetContainerStatus('onedev'))}`}>{GetContainerStatus('onedev')}</p>
                 </div>
-                <div className="docker-container-item docker-container-item-hover-redirect" onClick={redirectToPortainer}>
+                <div className="docker-container-item docker-container-item-hover-redirect" onClick={RedirectToPortainer}>
                     <p><b>Portainer</b></p>
-                    <p className={`docker-container-status ${getContainerStatusClass(getContainerStatus('portainer'))}`}>{getContainerStatus('portainer')}</p>
+                    <p className={`docker-container-status ${GetContainerStatusClass(GetContainerStatus('portainer'))}`}>{GetContainerStatus('portainer')}</p>
                 </div>
-                <div className="docker-container-item docker-container-item-hover-redirect" onClick={redirectToPgAdmin}>
+                <div className="docker-container-item docker-container-item-hover-redirect" onClick={RedirectToPgAdmin}>
                     <p><b>pgAdmin</b></p>
-                    <p className={`docker-container-status ${getContainerStatusClass(getContainerStatus('pgAdmin'))}`}>{getContainerStatus('pgAdmin')}</p>
+                    <p className={`docker-container-status ${GetContainerStatusClass(GetContainerStatus('pgAdmin'))}`}>{GetContainerStatus('pgAdmin')}</p>
                 </div>
             </div>
         </div>
