@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
+import {useTranslation} from "react-i18next";
 
 import "./Containers.css";
 
 export const Containers = () => {
     const [containers, setContainers] = useState([]);
+    const {t} = useTranslation();
+
     useEffect(() => {
         const fetchContainers = async() => {
             try
@@ -72,7 +75,7 @@ export const Containers = () => {
     return(
         <div id="docker-container">
             <div id="docker-label">
-                <p id="docker-label-text">Docker Containers Status</p>
+                <p id="docker-label-text">{t("docker.container.status")}</p>
             </div>
             <div id="docker-containers-content">
                 <div className="docker-container-item">
