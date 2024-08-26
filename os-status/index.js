@@ -219,6 +219,18 @@ app.get('/ram-usage', async (req, res) => {
     }
 })
 
+app.get('/ram-usage-percentage', async (req, res) => {
+    //%
+    try
+    {
+        res.json((os.totalmem() - os.freemem()) / os.totalmem() * 100);
+    }
+    catch(error)
+    {
+        res.status(500).json({error: error.message});
+    }
+})
+
 //System
 app.get('/os', async (req, res) => {
     try
