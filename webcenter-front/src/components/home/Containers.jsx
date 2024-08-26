@@ -32,7 +32,7 @@ export const Containers = () => {
 
         setInterval(() => {
            fetchContainers();
-        }, 10000);
+        }, 30000);
     }, []);
 
     const GetContainerStatus = (name) => {
