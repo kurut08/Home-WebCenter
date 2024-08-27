@@ -182,6 +182,19 @@ app.get('/disk-used', async (req, res) => {
     }
 })
 
+app.get('/disk-used-percentage', async (req, res) => {
+    //Bytes
+    try
+    {
+        const {free, total} = disk.checkSync(targetPath);
+        res.json((total - free) / total * 100);
+    }
+    catch(error)
+    {
+        res.status(500).json({error: error.message});
+    }
+})
+
 //RAM
 app.get('/ram-free', async (req, res) => {
     //Bytes
