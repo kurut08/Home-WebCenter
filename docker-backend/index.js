@@ -19,7 +19,7 @@ app.get('/containers', async (req, res) => {
         }
         if(id)
         {
-            containers = containers.filter(containers => container.Id.includes(id));
+            containers = containers.filter(container => container.Id.includes(id));
         }
 
         res.json(containers);
@@ -30,4 +30,4 @@ app.get('/containers', async (req, res) => {
     }
 });
 
-app.listen(port, () => {console.log(`Backend API listening at "http://localhost:${port}`)});
+app.listen(port, () => {console.log(`Backend API listening at http://localhost:${port}`)});
