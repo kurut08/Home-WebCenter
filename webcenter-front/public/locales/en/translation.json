@@ -1,8 +1,24 @@
 {
+  "docker.container.status": "Docker Containers Status",
+
+  "footer.credits": "By Kurut08",
+
   "home": "Home",
 
   "lang.english": "English",
   "lang.polish": "Polish",
 
-  "footer.credits": "By Kurut08"
+  "os": "OS",
+  "os.architecture": "OS architecture",
+  "os.cpu.count": "CPU Count",
+  "os.cpu.usage": "Total CPU Usage",
+  "os.cpus.status": "CPUs status",
+  "os.disk.usage": "Disk usage",
+  "os.disk.usage.percentage": "Disk usage %",
+  "os.ram.usage": "RAM usage",
+  "os.ram.usage.percentage": "RAM usage %",
+  "os.status": "System status",
+  "os.uptime": "Uptime",
+
+  "status.fetching": "Fetching"
 }

@@ -1,8 +1,24 @@
 {
+  "docker.container.status": "Status kontenerów Dockera",
+
+  "footer.credits": "Stworzone przez: Kurut08",
+
   "home": "Strona główna",
 
   "lang.english": "Angielski",
   "lang.polish": "Polski",
 
-  "footer.credits": "Stworzone przez: Kurut08"
+  "os": "System operacyjny",
+  "os.architecture": "Architektura systemu",
+  "os.cpu.count": "Liczba rdzeni procesora",
+  "os.cpu.usage": "Łączne wykorzystanie procesora",
+  "os.cpus.status": "Status rdzeni procesora",
+  "os.disk.usage": "Zużycie dysku",
+  "os.disk.usage.percentage": "% zużycia dysku",
+  "os.ram.usage": "Zużycie RAMu",
+  "os.ram.usage.percentage": "% zużycia RAMu",
+  "os.status": "Status systemu",
+  "os.uptime": "Czas działania systemu",
+
+  "status.fetching": "Pobieranie"
 }
